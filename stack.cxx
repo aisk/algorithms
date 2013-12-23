@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
+#include <cstdlib>
+#include <cstring>
+#include <cassert>
 
 typedef int stack_elem_t;
 
