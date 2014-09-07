@@ -14,3 +14,6 @@
 
 # Executable
 a.out
+
+# Editors
+*.swp
