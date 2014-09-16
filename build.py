@@ -40,6 +40,7 @@ def clean_all():
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print 'useage: build.py [build|clean|run]'
+        sys.exit(1)
     if sys.argv[1] == 'build':
         build_all()
     elif sys.argv[1] == 'clean':
