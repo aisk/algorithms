@@ -12,7 +12,7 @@ sources = [x for x in files if x.endswith('.cc')]
 def build(source):
     target = source[:-3]
     sys.stdout.write('compile [%(source)s] ... ' % locals())
-    result = os.system('clang++ %(source)s -o %(target)s' % locals())
+    result = os.system('clang++ -std=c++11 -g %(source)s -o %(target)s' % locals())
     if result == 0:
         sys.stdout.write('done!\n')
     else:
@@ -26,7 +26,7 @@ def build_all():
 def clean(source):
     target = source[:-3]
     sys.stdout.write('clean [%(source)s] ... ' % locals())
-    result = os.system('rm -f %(target)s' % locals())
+    result = os.system('rm -rf %(target)s %(target)s.dSYM' % locals())
     if result == 0:
         sys.stdout.write('done!\n')
     else:
